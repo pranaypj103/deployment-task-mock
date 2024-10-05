@@ -1,0 +1,10 @@
+---
+- name: devops
+  hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    copy:
+      src: /root/devops/deploy.sh
+      dest: /home/ansible/
