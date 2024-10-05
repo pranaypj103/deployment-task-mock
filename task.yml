@@ -5,6 +5,7 @@
   become: yes
   connection: ssh
   tasks:
-    copy:
-      src: /root/devops/deploy.sh
-      dest: /home/ansible/
+    - name: Copy deploy script to home directory
+      copy:
+        src: /root/devops/deploy.sh
+        dest: /home/ansible/
